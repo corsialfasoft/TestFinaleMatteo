@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Aggiungi Menu";
+}
+
+<h2>Aggiungi Menu</h2>
+<body>
+    <h1 style="padding-left:15px">@ViewBag.Title</h1>
+    <div class="row">
+        <h4 style="padding-left:30px">@ViewBag.Message</h4>
+        <div style="float:right; padding-bottom:10px; padding-right:30px; text-align:right" class="col-lg-6">
+            @using(Html.BeginForm("aggiungimenu","Home",FormMethod.Post)) {
+                <input type="text" name="_Giorno" id="_Giorno" placeholder="Inserisci il giorno" style="border-radius:4px;" />
+                <input type="text" name="_Orario" id="_Orario" placeholder="Inserisci l'orario" style="border-radius:4px;" />
+                <input type="text" name="_Primo" id="_Primo" placeholder="Inserisci il primo piatto" style="border-radius:4px;" />
+                <input type="text" name="_Secondo" id="_Secondo" placeholder="Inserisci il secondo piatto" style="border-radius:4px;" />
+                <input type="text" name="_Contorno" id="_Contorno" placeholder="Inserisci il contorno " style="border-radius:4px;" />
+                <input type="text" name="_Dolce" id="_Dolce" placeholder="Inserisci il dolce" style="border-radius:4px;" />
+                <input type="submit" value="Aggiungi">
+            }
+        </div>
+    </div>
+</body>
