@@ -54,7 +54,7 @@ namespace ConsoleApp1 {
 			}
 			Console.WriteLine("");
 			Console.WriteLine("stampo la lista congiunta ordinata");
-			List<int> concatenazione = test1.Concat(test2).ToList();
+			List<int> concatenazione = Ordina(test1.Concat(test2).ToList());
 			for(int a=0; a<concatenazione.Count;a++){
 				Console.Write("{0}  ",concatenazione[a]);
 			}
