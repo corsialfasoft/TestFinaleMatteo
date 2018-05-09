@@ -3,7 +3,7 @@
     ViewBag.Title = "Aggiungi Menu";
 }
 
-<h2>Aggiungi Menu</h2>
+
 <body>
     <h1 style="padding-left:15px">@ViewBag.Title</h1>
     <div class="row">
@@ -20,4 +20,37 @@
             }
         </div>
     </div>
-</body>
+    
+    <h1>Lista Menu</h1>
+    @if(@ViewBag.Menus != null) {
+        <div>
+            <div class=" container">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Giorno</th>
+                            <th scope="col">Orario</th>
+                            <th scope="col">Primo</th>
+                            <th scope="col">Secondo</th>
+                            <th scope="col">Contorno</th>
+                            <th scope="col">Dolce</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var menu  in @ViewBag.Menus) {
+                        <tr>
+                            <td>@menu.Giorno</td>
+                            <td>@menu.Orario</td>
+                            <td>@menu.Primo</td>
+                            <td>@menu.Secondo</td>
+                            <td>@menu.Contorno</td>
+                            <td>@menu.Dolce</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    }
+    </body>
